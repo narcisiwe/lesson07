@@ -34,9 +34,44 @@ let appData = {
             let value = [];
             let askExpenses = [];
             askExpenses[i] = prompt('Введите обязательную статью расходов??');
-            value[i] = +prompt('Во сколько это обойдется?');
+            do 
+            { 
+            value = prompt('Во сколько это обойдется?');
+            }
+            while (isNaN(parseFloat(value)) || value < 0);
             appData.expenses[askExpenses[i]] = value[i];
             }
+
+
+
+        // for (let i=0; i < 2; i++) {
+        //     expenses[i] = prompt('Введите обязательную статью расходов??');
+        //     do 
+        //     {
+        //     value = prompt('Во сколько это обойдется?');
+        //     } 
+        //     while (isNaN(parseFloat(value)) || value < 0);
+        //      etExpensesSum+=value;
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 };
 appData.asking();
